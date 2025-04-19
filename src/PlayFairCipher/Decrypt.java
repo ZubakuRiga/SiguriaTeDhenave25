@@ -46,8 +46,8 @@ public class Decrypt {
         for(int i=0; i<cipherText.length(); i+=2){
             char a = cipherText.charAt(i);
             char b = cipherText.charAt(i+1);
-            int[] pozA = shkronja_pozicion(a);
-            int[] pozB = shkronja_pozicion(b);
+            int[] pozA = shkronja_pozicion.get(a);
+            int[] pozB = shkronja_pozicion.get(b);
 
             if(pozA[0] == pozB[0]){
                 decrypted.append(matrica[pozA[0]][(pozA[1]+SIZE - 1) % SIZE]);
@@ -90,17 +90,27 @@ public class Decrypt {
 
 
             public void printoMatricen(){
-           System.out.println("MATRICA PLAYFAIR: ");
-           for (int i=0; i < SIZE; i++){
-               for (int j=0; j<SIZE; j++){
-                   System.out.println(matrica[i][j] + " ");
-               }
-               System.out.println();
-           }
-       }
+                System.out.println("Playfair Matrix:");
+                System.out.println("---------------------");
+                for (int i = 0; i < SIZE; i++) {
+                    System.out.print("| ");
+                    for (int j = 0; j < SIZE; j++) {
+                        System.out.print(matrica[i][j] + " ");
+                    }
+                    System.out.println("|");
+                }
+                System.out.println("---------------------");
+            }
+    public static void main(String[] args) {
+        Decrypt plain = new Decrypt("playfair");
+        plain.printoMatricen();
 
+        String ciphertext = "BRHL";
+        String decrypted = plain.decrypt(ciphertext);
 
+        System.out.println("Enkriptuar: " +ciphertext);
+        System.out.println("Dekriptuar: " +decrypted);
 
-
+    }
 
 }

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Encrypt {
     public static void main(String[] args) {
-        DisruptedTransposition.encrypt("Sot kemi mesim ne klasen tjeter","zebra");
+        DisruptedTransposition.encrypt("Sot kemi mesim ne klasen tjeter","un");
     }
 }
 
@@ -42,7 +42,15 @@ class DisruptedTransposition {
         for(int i=0; i<key.length(); i++){
             char keyChar = key.toUpperCase().charAt(i);
             int alphabetOrder = (int)(keyChar - 'A')%26;
-            keyOrderDistorted.add(alphabetOrder); //Permban poziten ne alfabet te shkronjave te celsit
+
+            if(keyOrderDistorted.contains(alphabetOrder)){ //ky "if" mundeson qe qelsi me pas shkronja duplikate. Nese ka renditja n'baze talfabetit prishet
+                // sepse i shtohen +26. Shtimi i variables "i" lejon qe nese e njejta shkronje perseritet disa here nje pas nje "uuuuu" te kete
+                // mundesin qe seicla te identifikohet veqmas.
+                keyOrderDistorted.add(alphabetOrder+26+i);
+            }else{
+                keyOrderDistorted.add(alphabetOrder); //Permban poziten ne alfabet te shkronjave te celsit
+            }
+
         }
 
         //Rankimi i pozitave te shkronjave ne alfabet, duke filluar nga 0 dhe duke u rrit per 1
@@ -91,6 +99,6 @@ class DisruptedTransposition {
         }
 
         System.out.print("--------------------------------------------------------------------------\n");
-        System.out.println("\n Mesazhi i enkriptuar: "+cipher);
+        System.out.println("\nMesazhi i enkriptuar: "+cipher);
     };
 }

@@ -64,4 +64,14 @@ public class Decrypt {
 
     }
 
+       public void printoMatricen(){
+           System.out.println("MATRICA PLAYFAIR: ");
+           for (int i=0; i < SIZE; i++){
+               for (int j=0; j<SIZE; j++){
+                   System.out.println(matrica[i][j] + " ");
+               }
+               System.out.println();
+           }
+       }
+
 }

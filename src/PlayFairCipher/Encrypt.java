@@ -1,4 +1,4 @@
 package PlayFairCipher;
 
-public class Encypt {
+public class Encrypt {
 }

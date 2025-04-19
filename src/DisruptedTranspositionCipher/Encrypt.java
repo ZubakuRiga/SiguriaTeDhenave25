@@ -1,4 +1,4 @@
 package DisruptedTranspositionCipher;
 
-public class Encypt {
+public class Encrypt {
 }

@@ -38,4 +38,30 @@ public class Decrypt {
         }
     }
 
+    //Logjika e dekriptimit
+    public String decrypt(String cipherText){
+        cipherText = cipherText.toUpperCase();
+        StringBuilder decrypted = new StringBuilder();
+
+        for(int i=0; i<cipherText.length(); i+=2){
+            char a = cipherText.charAt(i);
+            char b = cipherText.charAt(i+1);
+            int[] pozA = shkronja_pozicion(a);
+            int[] pozB = shkronja_pozicion(b);
+
+            if(pozA[0] == pozB[0]){
+                decrypted.append(matrica[pozA[0]][(pozA[1]+SIZE - 1) % SIZE]);
+                decrypted.append(matrica[pozB[0]][(pozB[1]+SIZE - 1) % SIZE]);
+            }else if (pozA[1] == pozB[1]){
+                decrypted.append(matrica[(pozA[0]+ SIZE -1)% SIZE][pozA[1]]);
+                decrypted.append(matrica[(pozB[0]+ SIZE -1)% SIZE][pozB[1]]);
+            }else {
+                decrypted.append(matrica[pozA[0]][pozB[1]]);
+                decrypted.append(matrica[pozB[0]][pozA[1]]);
+            }
+        }
+        return decrypted.toString();
+
+    }
+
 }

@@ -64,7 +64,32 @@ public class Decrypt {
 
     }
 
-       public void printoMatricen(){
+    //Kontrollimi per X ne mes shkronjave te njejta
+    private String cleanDecryptedText(String text) {
+        StringBuilder cleaned = new StringBuilder();
+
+        for (int i = 0; i < text.length(); i++) {
+            char current = text.charAt(i);
+
+            if (i > 0 && i < text.length() - 1 &&
+                    current == 'X' &&
+                    text.charAt(i - 1) == text.charAt(i + 1)) {
+                continue;
+            }
+            cleaned.append(current);
+        }
+        //Largojme X nese eshte shtuar per plotesim
+        if (cleaned.length() > 0 && cleaned.charAt(cleaned.length() - 1) == 'X') {
+            cleaned.setLength(cleaned.length() - 1);
+        }
+
+        return cleaned.toString();
+    }
+
+
+
+
+            public void printoMatricen(){
            System.out.println("MATRICA PLAYFAIR: ");
            for (int i=0; i < SIZE; i++){
                for (int j=0; j<SIZE; j++){
@@ -73,5 +98,9 @@ public class Decrypt {
                System.out.println();
            }
        }
+
+
+
+
 
 }

@@ -92,7 +92,5 @@ class DisruptedTransposition {
 
         System.out.print("--------------------------------------------------------------------------\n");
         System.out.println("\n Mesazhi i enkriptuar: "+cipher);
-
-
     };
 }

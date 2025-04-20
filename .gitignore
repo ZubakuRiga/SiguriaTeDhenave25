@@ -3,6 +3,7 @@
 *.iml
 *.iws
 out/
+production/
 
 
 ### Build ###

@@ -21,6 +21,35 @@ Më poshtë është një përshkrim i shkurtër për secilin file:
 - **Përshkrimi**: Implementon algoritmin e dekriptimit për Disrupted Transposition Cipher. Përdor matricën e krijuar nga teksti i koduar dhe çelësi për të rikthyer tekstin e thjeshtë duke ndjekur renditjen e kolonave sipas çelësit.
 
 
+### Shembull Enkriptimi / Dekriptimi me PlayFair Cipher
+
+**Teksti origjinal:** `Shihemi ne vendtakimin e perhershem`  
+**Çelësi:** `kafeneja`  
+**Mesazhi i enkriptuar:** `QMHQFOGKKYNKOYFACHGKNOATOKSTOKSF`
+
+---
+
+**Teksti i enkriptuar:** `QMHQFOGKKYNKOYFACHGKNOATOKSTOKSF`  
+**Çelësi:** `kafeneja`  
+**Mesazhi i dekriptuar:** `SHIHEMINEVENDTAKIMINEPERHERSHEM`
+
+
+
+
+### Shembull Enkriptimi / Dekriptimi me Disrupted Transposition Cipher
+
+**Teksti origjinal:** `Shihemi ne vendtakimin e perhershem`  
+**Çelësi:** `kafeneja`  
+**Mesazhi i enkriptuar:** `hekpehvmri iemid rSna heeih tesmnne`
+
+---
+
+**Teksti i enkriptuar:** `hekpehvmri iemid rSna heeih tesmnne`  
+**Çelësi:** `kafeneja`  
+**Mesazhi i dekriptuar:** `Shihemi ne vendtakimin e perhershem`
+
+
+
 ## Shënime
 - Projekti demonstron përdorimin e teknikave klasike kriptografike.
 - Sigurohuni që teksti i thjeshtë dhe çelësat të ndjekin formatin e pritur për secilin algoritëm.

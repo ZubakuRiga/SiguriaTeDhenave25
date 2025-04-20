@@ -3,11 +3,6 @@ package DisruptedTranspositionCipher;
 import java.util.ArrayList;
 
 public class DisruptedDecrypt {
-    public static void main(String[] args) {
-        DisruptedDecrypt.decrypt("liek ohaloFrSll","zebra");
-
-    }
-
     public static void decrypt(String cipher, String key) {
         char[] chars = cipher.toCharArray();
         int nrCols = key.length();
@@ -48,7 +43,6 @@ public class DisruptedDecrypt {
         int fullColumns = totalChars % nrCols;
 
         int cipherLength = chars.length;
-
         int columnsWithExtraChar = totalChars % nrCols;
 
         int pointer = 0;

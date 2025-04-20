@@ -1,12 +1,12 @@
 package PlayFairCipher;
 import java.util.*;
 
-public class Decrypt {
+public class PlayfairDecrypt {
     private static final int SIZE =5;
     private char[][] matrica = new char[SIZE][SIZE];
     private Map<Character, int[]> shkronja_pozicion = new HashMap<>();
 
-    public Decrypt(String celesi){
+    public PlayfairDecrypt(String celesi){
         krijoMatricen(celesi.toUpperCase());
     }
 
@@ -65,7 +65,7 @@ public class Decrypt {
     }
 
     //Kontrollimi per X ne mes shkronjave te njejta
-    private String cleanDecryptedText(String text) {
+    private static String cleanDecryptedText(String text) {
         StringBuilder cleaned = new StringBuilder();
 
         for (int i = 0; i < text.length(); i++) {
@@ -101,15 +101,15 @@ public class Decrypt {
                 }
                 System.out.println("---------------------");
             }
-    public static void main(String[] args) {
-        Decrypt plain = new Decrypt("playfair");
+
+    public static void execute(String cipher, String key) {
+        PlayfairDecrypt plain = new PlayfairDecrypt(key);
         plain.printoMatricen();
 
-        String ciphertext = "BRHL";
-        String decrypted = plain.decrypt(ciphertext);
+        String decrypted = plain.decrypt(cipher);
 
-        System.out.println("Enkriptuar: " +ciphertext);
-        System.out.println("Dekriptuar: " +decrypted);
+        System.out.println("Enkriptuar: " +cipher);
+        System.out.println("Dekriptuar: " + cleanDecryptedText(decrypted));
 
     }
 

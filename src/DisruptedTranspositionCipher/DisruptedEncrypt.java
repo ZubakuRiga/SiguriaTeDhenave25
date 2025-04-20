@@ -1,18 +1,11 @@
 package DisruptedTranspositionCipher;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
-
-public class Encrypt {
-    public static void main(String[] args) {
-        DisruptedTransposition.encrypt("Sot kemi mesim ne klasen tjeter","un");
-    }
-}
 
 //Rreshtat kane gjatsi fikse. Gjatsia e qelsit tregon gjatesin e rreshtave ndersa renditje e shkronjave tqelsit tregon se cila kolone lexohet e para. BCA-qelsi, kolona 3
 //lexohet e para pastaj kolona 1 dhe kolona 2 e fundit. Nuk perdoren filler letters
 
-class DisruptedTransposition {
+public class DisruptedEncrypt {
     public static void encrypt(String plain, String key){
         char[] chars = plain.toCharArray();
         int nrCols = key.length();

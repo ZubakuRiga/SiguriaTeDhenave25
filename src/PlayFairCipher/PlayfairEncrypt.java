@@ -2,12 +2,12 @@ package PlayFairCipher;
 
 import java.util.*;
 
-public class Encrypt {
+public class PlayfairEncrypt {
     private static final int SIZE = 5;
     private char[][] matrix = new char[SIZE][SIZE];
     private Map<Character, int[]> letterPos = new HashMap<>();
 
-    public Encrypt(String keyword) {
+    public PlayfairEncrypt(String keyword) {
         buildMatrix(keyword.toUpperCase());
     }
 
@@ -83,9 +83,8 @@ public class Encrypt {
         return result.toString();
     }
 
-    public static void main(String[] args) {
-        Encrypt cipher = new Encrypt("playfair");
-        String plaintext = "riga";
+    public static void execute(String plaintext, String key){
+        PlayfairEncrypt cipher = new PlayfairEncrypt(key);
         String encrypted = cipher.encrypt(plaintext);
         System.out.println("Encrypted: " + encrypted);
     }

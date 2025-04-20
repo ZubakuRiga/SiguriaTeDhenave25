@@ -6,7 +6,7 @@ Më poshtë është një përshkrim i shkurtër për secilin file:
 ## Files dhe Përshkrimet
 
 ### `Main.java`
-- **Përshkrimi**: Pika hyrëse e projektit. Përdor `Scanner` për të lejuar përdoruesin të zgjedhë një nga algoritmet e implementuara (Playfair Cipher ose Disrupted Transposition Cipher) dhe të kryejë enkriptim ose dekriptim.
+- **Përshkrimi**: Pika hyrëse e projektit. Përdor `Scanner` për të lejuar përdoruesin të zgjedhë një nga algoritmet e implementuara (Playfair Cipher ose Disrupted Transposition Cipher) dhe të kryej enkriptim ose dekriptim.
 
 ### `PlayFairCipher/Encrypt.java`
 - **Përshkrimi**: Implementon algoritmin e enkriptimit Playfair Cipher. Ndërton një matricë 5x5 bazuar në një fjalë kyçe dhe enkripton tekstin e thjeshtë duke përdorur rregullat e Playfair.

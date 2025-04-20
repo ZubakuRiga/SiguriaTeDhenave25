@@ -1,7 +1,49 @@
 ### IntelliJ IDEA ###
+.idea/
+*.iml
+*.iws
 out/
-!**/src/main/**/out/
-!**/src/test/**/out/
+production/
+
+
+### Build ###
+/target/
+/build/
+/bin/
+/*.class
+
+### Log and temp files ###
+*.log
+*.tmp
+
+### OS-specific ###
+.DS_Store
+Thumbs.db
+
+### VS Code ###
+.vscode/
+
+### Gradle ###
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
 
 ### Eclipse ###
 .apt_generated
@@ -11,19 +53,4 @@ out/
 .settings
 .springBeans
 .sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-### VS Code ###
-.vscode/
-
-### Mac OS ###
-.DS_Store
